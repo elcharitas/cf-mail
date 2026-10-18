@@ -1,0 +1,32 @@
+{
+  "name": "cf-mail",
+  "version": "0.2.0",
+  "description": "Send email through Cloudflare.",
+  "type": "module",
+  "bin": {
+    "cf-mail": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "assets"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "prepack": "bun run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "wrangler": "4.151.1"
+  }
+}
