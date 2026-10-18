@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "cf-mail",
+      "name": "@elcharitas/cf-mail",
       "dependencies": {
         "wrangler": "4.151.1",
       },

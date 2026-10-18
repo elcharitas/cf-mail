@@ -8,17 +8,14 @@ cf-mail example@myregion.com -m "Some body" -t "Some title" -cc "cc@example.com"
 
 ## Install
 
-Requires Bun and Node.js 22+.
+Requires Node.js 22+.
 
 ```sh
-bun install
-bun run build
-bun link
+bun add --global @elcharitas/cf-mail
 ```
 
-Keep this folder in place and Bun's binary directory on `PATH`.
-Use `cf-mail` or `bunx --no-install cf-mail` from any folder.
-The latter avoids registry downloads. Run `bun unlink` here to remove the link.
+Or use `npm install --global @elcharitas/cf-mail`.
+For one command, use `bunx @elcharitas/cf-mail` with the same arguments.
 
 ## Setup
 
@@ -63,13 +60,16 @@ For uncertain delivery, check Email Sending activity before retrying to avoid du
 ## Development
 
 ```sh
+bun install
 bun run check
 bun run check:fix
 bun run typecheck
 bun run build
+bun link
 ```
 
 Biome checks formatting, imports, and lint. Rebuild after source changes to update the linked command.
+Keep this folder in place for local links; run `bun unlink` here to remove them.
 
 Cloudflare docs: [setup](https://developers.cloudflare.com/email-service/get-started/send-emails/),
 [authentication](https://developers.cloudflare.com/workers/wrangler/commands/general/),

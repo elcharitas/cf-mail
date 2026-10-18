@@ -1,7 +1,16 @@
 {
-  "name": "cf-mail",
+  "name": "@elcharitas/cf-mail",
   "version": "0.2.0",
   "description": "Send email through Cloudflare.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elcharitas/cf-mail.git"
+  },
+  "homepage": "https://github.com/elcharitas/cf-mail#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "type": "module",
   "bin": {
     "cf-mail": "dist/cli.js"
